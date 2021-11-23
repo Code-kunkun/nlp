@@ -76,6 +76,8 @@ def train(model, data):
     for t in range(2500):
         bx, by = data.sample(8)
         bx, by = torch.from_numpy(bx).to(device), torch.from_numpy(by).to(device)
+        print('bx shape', bx)
+        print('by shape', by)
         loss = model.step(bx, by)
         if t % 200 == 0:
             print(f'step:{t} | loss:{loss}')

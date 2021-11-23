@@ -59,6 +59,6 @@ def process_w2v_data(corpus, skip_window=2, method='skip_gram'):
 
     else:
         raise ValueError
-
-    return Dataset(x, y, v2i, i2v)
+    return x, y, v2i, i2v
+    #return Dataset(x, y, v2i, i2v)
 
